@@ -1,4 +1,7 @@
 # import training as train  # import 3.'s training.py
+"""
+    These file contains the functions used to detect cat colors
+"""
 import sys
 import os
 from PIL import Image
@@ -16,12 +19,14 @@ categories = [name for name in os.listdir(
 
 
 def load_model():
+    """loads the keras model from the saved files"""
     model = keras.models.load_model(detector_path)
     model.load_weights(weights_path)
     return model
 
 
 def predict_color(image_path, model, verbose=False):
+    """Applies the predictor to a given image"""
     image = get_image(image_path)
     predict = model.predict(image)
     color = None
@@ -34,6 +39,7 @@ def predict_color(image_path, model, verbose=False):
 
 
 def get_image(file_name):
+    """retrieves an image from a file and returns it as an np array of pixels"""
     image_array = []
     file_name = os.path.abspath(file_name)
     img = Image.open(file_name)

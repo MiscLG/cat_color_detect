@@ -1,6 +1,9 @@
 # cat_color_detect
+
 ### Detection of cats coat color with Keras + Tensorflow
+
 #### Is there a tortoiseshell cat on the cover of the cat's magazine?
+
 - Python 3.6.6
 - Tensorflow 1.9.0
 - Keras 2.2.0
@@ -29,7 +32,7 @@ You need 'cascade.xml' from https://github.com/wellflat/cat-fancier
 
 - data_create.py
 
-`$ python3 data_create.py cat_image`
+`$ python3 data_create.py catimage`
 
 ```
 cat_image
@@ -53,13 +56,13 @@ cat_image
 └── white
 ```
 
-data_create.py makes "cat_color.np"
+data_create.py makes "cat_color.npy"
 
 - training.py
 
-Use "cat_color.np"
+Use "cat_color.npy"
 
-` $ pytyon3 training.py cat_image cat_color.np`
+` $ pytyon3 training.py catimage cat_color.npy`
 
 training.py makes "snapshot/cat-bestmodel.hdf5"
 

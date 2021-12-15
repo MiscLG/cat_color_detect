@@ -1,3 +1,4 @@
+"""This file applies the trained color detector to a given image"""
 import argparse
 import os
 import glob
