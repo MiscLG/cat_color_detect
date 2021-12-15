@@ -24,6 +24,7 @@ def parsearguments():
 
 
 def detect(imagefilename, cascadefilename, scalefactor, minneighbors, categoly):
+    """applies detector to filename, """
     if not os.path.isdir('faces/'+categoly):
         os.mkdir('faces/'+categoly)
     srcimg = cv.imread(imagefilename)
